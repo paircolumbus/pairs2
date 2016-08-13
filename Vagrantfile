@@ -206,7 +206,7 @@ Vagrant.configure(2) do |config|
         ####
 
         # @param: version of ruby to install (e.g. 2.3.0). defaults to 'ruby' for the latest stable version
-        args_ruby_version = "ruby"
+        args_ruby_version = "2.3.1"
 
         # @param: (optional) list of ruby packages to install. the '--no-rdoc' and '--no-ri' flags disable documentation generation to help speed up the install process for gems.
         args_ruby_package_list = "--no-rdoc --no-ri bundler rails"
