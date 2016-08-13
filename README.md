@@ -22,3 +22,6 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+#Schema
+![data_model](https://cloud.githubusercontent.com/assets/15950650/17644632/d8985f3c-6159-11e6-9906-22379f5edd26.png)
