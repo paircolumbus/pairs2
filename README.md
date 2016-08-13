@@ -34,4 +34,4 @@ Make sure you have Vagrant and VirtualBox installed. Next, download the repo and
 vagrant up
 ```
 
-After the provisioning finishes, you can access the project at `localhost:3333`. That's it!
+After the provisioning finishes, you can access the project at [`localhost:3333`](http://localhost:3333). That's it!
