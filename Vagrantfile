@@ -12,7 +12,7 @@
 # fork it and change the following to reflect your own copy
 gh_user   = "drmyersii"
 gh_repo   = "vagrant-env-basher"
-gh_branch = "v0.8.2" # if you want to ensure consistency, use a specific tag (e.g. v0.1.0)
+gh_branch = "v0.8.3" # if you want to ensure consistency, use a specific tag (e.g. v0.1.0)
 gh_url    = "https://raw.githubusercontent.com/#{gh_user}/#{gh_repo}/#{gh_branch}"
 
 # path to provisioning scripts
@@ -218,8 +218,11 @@ Vagrant.configure(2) do |config|
         ## custom scripts
         ####
 
-        # install ruby packages
+        # install rails packages
         config.vm.provision :shell, privileged: false, inline: "cd /vagrant && bundle install"
+
+        # run the migrations
+        config.vm.provision :shell, privileged: false, inline: "cd /vagrant && bin/rails db:migrate"
 
         # run the rails server in a screen session
         config.vm.provision :shell, privileged: false, inline: "screen -S rails_server -d -m bash -c 'cd /vagrant && bin/rails s -b 0.0.0.0'", run: "always"
