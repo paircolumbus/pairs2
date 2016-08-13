@@ -6,5 +6,7 @@ class CreatePairs < ActiveRecord::Migration[5.0]
       t.integer :person_2, :null => false
       t.integer :status,   default: 0
     end
+
+    add_index :pairs, :event_id
   end
 end
