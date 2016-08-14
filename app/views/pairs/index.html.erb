@@ -2,5 +2,10 @@
 
 <div class="container text-center">
   <h1>Welcome to the Pairs App!</h1>
-  <%= link_to "Sign Up", sign_up_path, class: "btn btn-primary sign-up-button" %>
+  <% if user_signed_in? %>
+    <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "btn btn-primary sign-up-button" %>
+  <% else %>
+    <%= link_to "Sign In", new_user_session_path, class: "btn btn-primary sign-up-button" %>  
+    <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary sign-up-button" %>
+  <% end %>  
 </div>

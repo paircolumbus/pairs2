@@ -30,7 +30,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'factory_girl'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
+#Use Devise for managing Users
+gem 'devise', '>=3.2.4'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'simple_form', github: 'kesha-antonov/simple_form', branch: 'rails-5-0'
 
