@@ -32,7 +32,7 @@ gem 'factory_girl'
 # gem 'capistrano-rails', group: :development
 
 gem 'bootstrap-sass', '~> 3.3.6'
-gem 'simple_form'
+gem 'simple_form', github: 'kesha-antonov/simple_form', branch: 'rails-5-0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
