@@ -27,7 +27,7 @@ Rails.application.configure do
   end
 
   #Set up ActionMailer default
-  config.action_mailer.default_url_options = { host: 'localhost:3030' }
+  config.action_mailer.default_url_options = { host: 'localhost:3333' }
 
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
