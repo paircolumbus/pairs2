@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 20160813172548) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "events", force: :cascade do |t|
     t.integer  "organization_id", null: false
     t.string   "name",            null: false
@@ -37,7 +40,7 @@ ActiveRecord::Schema.define(version: 20160813172548) do
     t.integer "person_1",             null: false
     t.integer "person_2",             null: false
     t.integer "status",   default: 0
-    t.index ["event_id"], name: "index_pairs_on_event_id"
+    t.index ["event_id"], name: "index_pairs_on_event_id", using: :btree
   end
 
   create_table "skills", force: :cascade do |t|
@@ -54,8 +57,8 @@ ActiveRecord::Schema.define(version: 20160813172548) do
     t.integer  "skill_level",              null: false
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
-    t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["username"], name: "index_users_on_username", unique: true
+    t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
+    t.index ["username"], name: "index_users_on_username", unique: true, using: :btree
   end
 
 end
