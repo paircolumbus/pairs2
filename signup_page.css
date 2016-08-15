@@ -1,0 +1,91 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+body{
+font-family:verdana;
+
+}
+
+form{
+	margin-top:5%;
+	padding-top:5%;
+	padding-bottom:5%;
+	text-align:center;
+	border: 2px solid #1a8cff;		
+}
+
+header{
+	border-bottom: .5px solid black;	
+}
+
+li{
+	display:inline;	
+}
+
+a{
+	padding:20px;	
+}
+
+a:link {
+    color: black;
+	text-decoration:none;
+}
+
+a:visited {
+	color:blue;
+	text-decoration:none;	
+}
+
+label{
+    display:inline-block;
+    width:100px;
+}
+
+
+input[type=text] {
+    border: 2px solid black;
+    border-radius: 4px;
+}
+
+input[type=text]:focus {
+    border-color:blue;
+}
+
+.container{
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	height: 800px;
+	background-color: #FFFFFF;
+}
+
+.logo{
+	margin-top:3px;
+	height:120px;	
+}
+
+.login{
+	text-align:left;
+	width: 40%;	
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.nav{
+	float:right;
+	padding-right:10%;	
+}
+
+#signup{
+	margin-top:5%;
+	font-size:28pt;
+	color: #1a8cff;
+}
+
+#skill_level{
+	font-size:8pt;
+	margin-left:20%;
+	margin-top:3%;
+}
+	
