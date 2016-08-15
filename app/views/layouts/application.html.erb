@@ -10,12 +10,10 @@
   </head>
 
   <body>
-    <% if notice.present? %> 
-      <p><%= notice %></p>
-    <% end %>
-    <% if alert.present? %>
-      <p><%= alert %></p>
-    <% end %>
+    <div class="container" id="flash_messages">
+      <%= flash_messages %>
+    </div>
+
     <%= yield %>
   </body>
 </html>
