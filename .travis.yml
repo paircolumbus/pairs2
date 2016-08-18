@@ -8,3 +8,14 @@ before_script:
   - cp config/database.yml.travis config/database.yml
 notifications:
   slack: paircolumbus:t7agYXoqQOtCTCeFyJthhWnC
+
+install: true
+# blocklist
+branches:
+  except:
+
+# safelist
+branches:
+  only:
+  - master
+  - stable
