@@ -1,9 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  it "has a valid factory"
-  it "is invalid without a first name"
-  it "is invalid without a last name"
-  it "is invalid without an email"
-  it "is invalid without a username"
+  xit "has a valid factory"
+  xit "is invalid without a first name"
+  xit "is invalid without a last name"
+  xit "is invalid without an email"
+  xit "is invalid without a username"
 end
