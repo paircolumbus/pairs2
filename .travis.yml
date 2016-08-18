@@ -1,3 +1,15 @@
 language: ruby
 rvm:
   - 2.3.1
+  
+install: true
+# blocklist
+branches:
+  except:
+  
+
+# safelist
+branches:
+  only:
+  - master
+  - stable
