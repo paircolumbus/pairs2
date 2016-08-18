@@ -1,5 +1,5 @@
-require "rails_helper"
-
-describe Organization do
-
-end
+# require "rails_helper"
+#
+# describe Organization do
+#
+# end
