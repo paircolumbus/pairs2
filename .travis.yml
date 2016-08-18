@@ -8,3 +8,5 @@ before_script:
   - cp config/database.yml.travis config/database.yml
 notifications:
   slack: paircolumbus:t7agYXoqQOtCTCeFyJthhWnC
+before_install:
+  - gem install bundler
