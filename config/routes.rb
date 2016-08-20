@@ -9,5 +9,5 @@ Rails.application.routes.draw do
     get "/sign_up" => "devise/registrations#new", as: "new_user_registration"
   end
 
-  devise_for :users
+  devise_for :users, :controllers => { registrations: 'registrations' }
 end
