@@ -6,7 +6,7 @@
       <h2>Log in</h2>
 
       <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-        <%= f.input :email, autofocus: true %>
+        <%= f.input :login, label:"Email or Username", autofocus: true %>
         <%= f.input :password, autocomplete: "off" %>
         <% if devise_mapping.rememberable? -%>
           <%= f.input :remember_me, as: :boolean %>
