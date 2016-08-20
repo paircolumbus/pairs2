@@ -11,9 +11,11 @@
         <%= f.input :email %>
         <% if @minimum_password_length %>
         <em>(<%= @minimum_password_length %> characters minimum)</em>
-        <% end %><br />
+        <% end %><br /><br />
+        <%= f.input :username %>
         <%= f.input :password, autocomplete: "off" %>
         <%= f.input :password_confirmation, autocomplete: "off" %>
+        <%= f.input :skill_level, collection: User::SKILL_LEVELS.zip((0..2).to_a) %>
         <%= f.submit "Sign up", class: "btn btn-success" %>
       <% end %>
       <br>
