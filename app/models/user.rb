@@ -17,6 +17,8 @@ class User < ApplicationRecord
   # Checks to ensure that a username cannot be set that might match an existing email.
   validate :validate_username
 
+  validates_presence_of :first_name, :last_name, :username
+
   SKILL_LEVELS = %w(Beginner Intermediate Advanced)
 
   def self.find_for_database_authentication(warden_conditions)
