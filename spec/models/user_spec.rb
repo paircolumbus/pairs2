@@ -7,11 +7,11 @@ RSpec.describe User, type: :model do
   end
 
   it "is invalid without a first name" do
-    expect(FactoryGirl.build(:user, username: nil)).to_not be_valid
+    expect(FactoryGirl.build(:user, first_name: nil)).to_not be_valid
   end
 
   it "is invalid without a last name" do
-    expect(FactoryGirl.build(:user, username: nil)).to_not be_valid
+    expect(FactoryGirl.build(:user, last_name: nil)).to_not be_valid
   end
 
   it "is invalid without a username" do
