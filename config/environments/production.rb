@@ -83,4 +83,13 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  #set up mailing functionality
+  # config.action_mailer.default_url_options = {:host => 'paircolumbus.org'}
+  # config.action_mailer.delivery_method = :smtp
+  # config.action_mailer.smtp_settings = {
+  # :address => "127.0.0.1",
+  # :port    => 25,
+  # :domain  => 'paircolumbus.org'
+}
 end
