@@ -6,7 +6,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 event = Event.create([{name:"Anything", date:Time.now}])
->>>>>>> fa4d990f339f14e62a79a9cb294e52145370b2f2
 
 # Generate users
 
