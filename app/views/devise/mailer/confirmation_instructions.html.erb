@@ -1,6 +1,9 @@
-
-<p>Welcome <%= @user.first_name %>!</p>
-
-<p>You can confirm your account email through the link below:</p>
-
-<p><%= link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token) %></p>
+<p> 
+  You have successfully signed up to pairs columbus!, your username is: <%= @user.username %>.<br>
+</p>
+<p>
+  To login to the site, just follow this <a href="<%= confirmation_url(@resource, confirmation_token: @token) %>">confirmation link</a> .
+</p>
+<p>
+  Thanks for joining and Pair on!
+</p>

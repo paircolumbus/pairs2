@@ -39,4 +39,14 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+  
+  #Set up ActionMailer default
+  config.action_mailer.default_url_options = { host: 'localhost:3333' }
+
+  #Set up email protocol
+  config.action_mailer.delivery_method =:smtp
+  
+  #Set up smtp settings
+  config.action_mailer.smtp_settings = {:address => "localhost", :port => 1025 }
 end
