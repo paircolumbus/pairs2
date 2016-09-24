@@ -16,8 +16,15 @@ class User < ApplicationRecord
     }
   # Checks to ensure that a username cannot be set that might match an existing email.
   validate :validate_username
-
   validates_presence_of :first_name, :last_name, :username
+
+  has_many :organizations, foreign_key: 'admin_id'
+  has_many :reservations
+  has_many :events, through: :reservations
+  has_many :skills, through: :reservations
+  has_many :driven_pairs, through: :reservations
+  has_many :navigated_pairs, through: :reservations
+  delegate :pairs, to: :reservation
 
   SKILL_LEVELS = %w(Beginner Intermediate Advanced)
 
