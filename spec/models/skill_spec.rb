@@ -1,5 +1,5 @@
-# require "rails_helper"
-#
-# describe Skill do
-#
-# end
+require "rails_helper"
+
+RSpec.describe Skill, type: :model do
+  it { is_expected.to have_many(:reservations) }
+end
