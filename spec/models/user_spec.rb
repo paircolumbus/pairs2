@@ -21,4 +21,11 @@ RSpec.describe User, type: :model do
   it "is invalid without an email" do
     expect(FactoryGirl.build(:user, email: nil)).to_not be_valid
   end
+
+  it { is_expected.to have_many(:organizations) } 
+  it { is_expected.to have_many(:reservations) } 
+  it { is_expected.to have_many(:events) } 
+  it { is_expected.to have_many(:driven_pairs) } 
+  it { is_expected.to have_many(:navigated_pairs) } 
+  it { is_expected.to have_many(:skills) } 
 end

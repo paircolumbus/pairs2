@@ -39,6 +39,7 @@ group :development, :test do
   gem 'pry-rails'
   gem 'byebug', platform: :mri
   gem 'rspec-rails', '~> 3.5'
+  gem 'shoulda-matchers', '~> 3.1'
   gem 'factory_girl_rails'
   gem 'faker'
   gem 'capybara'

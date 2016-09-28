@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160813182810) do
+ActiveRecord::Schema.define(version: 20160924135204) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,6 +41,27 @@ ActiveRecord::Schema.define(version: 20160813182810) do
     t.integer "person_2",             null: false
     t.integer "status",   default: 0
     t.index ["event_id"], name: "index_pairs_on_event_id", using: :btree
+  end
+
+  create_table "reservation_statuses", force: :cascade do |t|
+    t.string   "title"
+    t.string   "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "reservations", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "event_id"
+    t.integer  "reservation_status_id"
+    t.integer  "skill_id"
+    t.integer  "experience_level"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+    t.index ["event_id"], name: "index_reservations_on_event_id", using: :btree
+    t.index ["reservation_status_id"], name: "index_reservations_on_reservation_status_id", using: :btree
+    t.index ["skill_id"], name: "index_reservations_on_skill_id", using: :btree
+    t.index ["user_id"], name: "index_reservations_on_user_id", using: :btree
   end
 
   create_table "skills", force: :cascade do |t|
