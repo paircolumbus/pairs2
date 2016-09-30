@@ -7,8 +7,8 @@ RSpec.feature "Signup", type: feature do
     fill_in "Last name", with: 'Doe'
     fill_in "Username", with: 'pat_doe'
     fill_in "Email", with: 'abc@def.com'
-    fill_in "Password", with: 'abcdef1'
-    fill_in "Password confirmation", with: 'abcdef1'
+    fill_in "Password", with: 'abcdef1', :match => :prefer_exact
+    fill_in "Password confirmation", with: 'abcdef1', :match => :prefer_exact
     select "Beginner", from: 'user[skill_level]'
     click_on "Sign up"
 
