@@ -14,8 +14,10 @@ class User < ApplicationRecord
     :uniqueness => {
       :case_sensitive => false
     }
+
   # Checks to ensure that a username cannot be set that might match an existing email.
   validate :validate_username
+  
   validates_presence_of :first_name, :last_name, :username
 
   has_many :organizations, foreign_key: 'admin_id'
