@@ -1,11 +1,33 @@
 <% title "A superior pairing app." %>
 
-<div class="container text-center">
-  <h1>Welcome to the Pairs App!</h1>
-  <% if user_signed_in? %>
-    <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "btn btn-primary sign-up-button" %>
-  <% else %>
-    <%= link_to "Sign In", new_user_session_path, class: "btn btn-primary sign-up-button" %>
-    <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary sign-up-button" %>
-  <% end %>
+<div class="container">
+  <h1 class='text-center'>Welcome to the Pairs App!</h1>
+
+  <div class="row">
+    <p class='lead text-center'>Our partner organizations use pairs for coordinating mentoring and pairing. <a href='#'>Add your group</a> today.</p>
+
+    <div class="col-md-3">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          Panel content
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <h3 class='text-center'>Events</h3>
+    <p class='lead text-center'>Check out one of these great events.</p>
+
+    <div class="col-md-3">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">Panel title</h4>
+        </div>
+        <div class="panel-body">
+          Panel content
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
