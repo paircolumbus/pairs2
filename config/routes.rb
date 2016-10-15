@@ -10,4 +10,6 @@ Rails.application.routes.draw do
   end
 
   devise_for :users, controllers: { registrations: 'registrations' }
+
+  resources :organizations
 end
