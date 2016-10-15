@@ -1,5 +1,25 @@
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <a class="navbar-brand" href="<%= root_url %>">Pairs</a>
+
+    <ul class='nav navbar-nav navbar-right'>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dashboard <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Profile</a></li>
+          <li role="separator" class="divider"></li>
+          <li><%= link_to 'Organizations', organizations_path %></li>
+          <li><a href="#">Events</a></li>
+        </ul>
+      </li>
+
+      <li class='divider-vertical'></li>
+      <% if user_signed_in? %>
+        <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+      <% else %>
+        <li><%= link_to "Sign In", new_user_session_path %></li>
+        <li><%= link_to "Sign Up", new_user_registration_path %></li>
+      <% end %>
+    </ul>
   </div>
 </nav>
