@@ -95,3 +95,16 @@ After the provisioning finishes, you can access the project at [`localhost:3333`
 
 To access the vagrant machine, use `vagrant ssh`. This will ssh into your
 vagrant machine. All application code is located in `/vagrant`.
+
+## Running Tests
+
+Navigate to the `/vagrant` directory within vagrant and `rspec`.
+
+### Setup
+
+To setup the database, run:
+
+```bash
+bundle exec rake db:create RAILS_ENV=test
+bundle exec rake db:schema:load RAILS_ENV=test
+```
