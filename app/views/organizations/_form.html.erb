@@ -1,0 +1,6 @@
+<%= simple_form_for(@organization) do |f| %>
+  <%= f.input :name %>
+  <%= f.association :admin %>
+  <%= f.input :description %>
+  <%= f.submit 'Create', class: 'btn btn-default' %>
+<% end %>

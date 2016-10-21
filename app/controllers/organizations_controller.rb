@@ -1,9 +1,12 @@
 class OrganizationsController < ApplicationController
+  respond_to :html
+
   def index
     @organizations = Organization.all
   end
 
   def new
+    @organization = Organization.new
   end
 
   def create
@@ -18,8 +21,9 @@ class OrganizationsController < ApplicationController
   def destroy
   end
 
-   private
+    private
 
-   def organization_params
-   end
+      def organization_params
+        params.require(:organization).permit(:name, :description, :admin_id)
+      end
 end
