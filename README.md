@@ -1,15 +1,15 @@
 [![Build Status](https://travis-ci.org/paircolumbus/pairs2.svg?branch=master)](https://travis-ci.org/paircolumbus/pairs2)
 
-##Requirements for Pairs App
+## Requirements for Pairs App
 
 Details:
 by Vasanth Pappu & Jay Bobo  
 paircolumbus.org
 
-####Goal:
+#### Goal:
 To develop an automated solution to pairing meetup attendees of varying experience.
 
-####Instructions:
+#### Instructions:
 * Must use Rails 5
 * Must use a testing framework (ie. Minitest, RSpec, Cucumber)
 * Use the front end framework of your choice (ie. html/vanillajs/angular/react)
@@ -20,7 +20,7 @@ To develop an automated solution to pairing meetup attendees of varying experien
 * Slack: paircolumbus.slack.com
 
 
-####Minimum Requirements:
+#### Minimum Requirements:
 User sign up
 * Multiple users should be able to sign in
 * Should be able to identify as an organizer or an attendee
@@ -62,7 +62,7 @@ Pairing
    * I.e. code snippets
 
 
-####Nice-to-have features:
+#### Nice-to-have features:
 Roadmapping
 * A roadmap is a map of different things a user has learned over pairing
 * A user should be able to edit their roadmap
@@ -78,7 +78,7 @@ Chat
 * Another user that’s part of a different pair should be able to peer in and respond if they know something helpful
 
 
-#Schema
+# Schema
 ![data_model](https://cloud.githubusercontent.com/assets/15950650/17644632/d8985f3c-6159-11e6-9906-22379f5edd26.png)
 
 # Vagrant Instructions
